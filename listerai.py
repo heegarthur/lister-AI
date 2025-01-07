@@ -74,13 +74,13 @@ def update_model(new_item, new_labels, vectorizer, model, items, labels):
     
     X = vectorizer.fit_transform(items)
     model.fit(X, [', '.join(label) for label in labels])
-    print("Model is bijgewerkt met nieuwe gegevens!")
+    print("Model updated!")
 
 
 def save_new_data(file_path, new_item, new_labels):
     with open(file_path, "a") as file:
         file.write(f"{new_item},{','.join(new_labels)}\n")
-    print(f"Nieuwe gegevens zijn opgeslagen in {file_path}")
+    print(f"New data saved to {file_path}!")
 
 
 def main():
